@@ -1,0 +1,15 @@
+.dashboard-main{
+    /* font-size: 30px; */
+    min-height: 70vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard-main p{
+  font-size: 20px;
+  padding: 0 20px
+}
