@@ -1,0 +1,19 @@
+.ourwork {
+    display: block;
+}
+.ourwork span {
+    color: rgb(147 51 234);
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.ourwork h1 {
+    font-size: 48px !important;
+    font-weight: 600 !important;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.ourwork p {
+    color: #424242;
+}

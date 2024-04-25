@@ -1,5 +1,7 @@
+import axios from 'axios';
 import authService from '../../services/authService';
 import { LOGIN_FAILURE, LOGIN_SUCCESS, REGISTER_FAILURE, REGISTER_SUCCESS } from '../types/types';
+import { API_Key } from '../../constants/consts';
 
 export const loginUser = (formData) => (dispatch) => {
     // return axios.post("http://localhost:3000/api/v1/login", formData)
@@ -8,7 +10,7 @@ export const loginUser = (formData) => (dispatch) => {
             console.log(data);
             const payload = {
                 token: data.accessToken,
-                user: formData.user,
+                user: data,
             }
             dispatch({
                 type: LOGIN_SUCCESS,
@@ -16,7 +18,9 @@ export const loginUser = (formData) => (dispatch) => {
             });
             
             localStorage.setItem('token', JSON.stringify(data.accessToken));
-            localStorage.setItem('user', JSON.stringify(formData));
+            localStorage.setItem('user', JSON.stringify(data));
+            setAuthorization(data.accessToken);
+
             return Promise.resolve();
         })
         .catch((err) => {
@@ -45,3 +49,16 @@ export const registUser = (formData) => (dispatch) => {
             return Promise.reject(err);
         });
 }
+
+export const logoutUser = () => {
+    authService.logout();
+    setAuthorization('');
+}
+
+export const setAuthorization = (token) => {
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    } else {
+      delete axios.defaults.headers.common['Authorization'];
+    }
+};

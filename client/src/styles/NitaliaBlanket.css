@@ -1,0 +1,50 @@
+.heading-one {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading-one h1 {
+    font-size: 48px !important;
+    font-weight: 600 !important;
+}
+
+.heading-one p {
+    font-size: 20px;
+    color: gray;
+    width: 70%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
+}
+
+.heading-one h1 span {
+    font-size: 48px;
+    font-weight: 600;
+    display: inline;
+    color: rgb(147, 51, 234);
+}
+
+.heading-one p span {
+    color: rgb(147, 51, 234);
+}
+
+.heading-one span {
+    color: rgb(147, 51, 234);
+}
+
+.container {
+    margin: 0 auto;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container video {
+    margin: 30px auto;
+}
+
+.heading-one .btn-sec {
+    display: none;
+}

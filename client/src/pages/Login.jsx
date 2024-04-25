@@ -3,18 +3,21 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { toast } from "react-toastify";
 
-import GoogleSvg from "../assets/icons8-google.svg";
-import "../styles/Login.css";
 import { loginUser } from '../redux/actions/authActions';
 
+import GoogleSvg from "../assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
+import "../styles/Login.css";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("token")) || "");
+  const [btnDisable, setBtnDisable] = useState(false);
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
@@ -26,15 +29,18 @@ const Login = () => {
         user,
         password,
       };
+      setBtnDisable(true);
 
       dispatch(loginUser(formData))
         .then(() => {
           toast.success("Login successfull");
+          setBtnDisable(false);
           navigate("/airesearch");
         })
         .catch((err) => {
           console.log(err);
           toast.error(err.message);
+          setBtnDisable(false)
         });
 
     } else {
@@ -105,7 +111,7 @@ const Login = () => {
                 </a>
               </div>
               <div className="login-center-buttons">
-                <button type="submit">Log In</button>
+                <button disabled={btnDisable} type="submit">Log In</button>
                 <button type="submit">
                   <img src={GoogleSvg} alt="" />
                   Log In with Google

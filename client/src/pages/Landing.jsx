@@ -1,17 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import Donate from '../components/Donate';
+
 import "../styles/Landing.css";
-import { Link } from 'react-router-dom';
 
 const Landing = () => {
+  const [searchText, setSearchText] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleKeyDown = (key) => {
+    if(key === 'Enter') {
+      console.log(searchText);
+      if(searchText !== '') {
+        navigate('/airesearch?search=' + searchText)
+      } else {
+        navigate('/airesearch');
+      }
+    }
+  }
+
   return (
-    <div className='w-full xl:w-[1250px] lg:w-[1000px] md:w-[750px] sm:w-[640px] mx-auto py-8'>
+    <div className='w-full xl:w-[1250px] lg:w-[1000px] md:w-[750px] sm:w-[640px] mx-auto px-3 py-8'>
       <div className='flex flex-col-reverse w-full gap-4 mx-auto md:flex-row'>
         <div className='flex flex-col gap-3 md:max-w-[50%] w-full align-middle text-center md:text-start px-2'>
           <span className='mt-8 text-2xl font-semibold text-purple-700 md:text-6xl'>
             Welcome to the Living Ai Cancer Research Platform (PurpleAi)
           </span>
           <p className='mt-4 text-xl leading-8 text-gray-600'>
-            We are pleased to introduce <span className='text-purple-700'> Purple Ai </span>, a revolutionary Ai platform to help you make better decisions about your child's cancer treatment.
+            We are pleased to introduce <span className='text-purple-700'> Purple Ai </span>, 
+            a revolutionary Ai platform to help you make better decisions 
+            about your child's cancer treatment.
           </p>
 
           <div className='relative flex w-full gap-4 px-3 py-4 mt-6 align-middle border border-gray-300 rounded-lg'>
@@ -20,16 +40,20 @@ const Landing = () => {
             </button>
             <input
               type="text"
+              value={searchText}
+              onChange={e => setSearchText(e.target.value)}
+              onKeyDown={e => handleKeyDown(e.key)}
               className="w-full p-0 bg-transparent border-none outline-none"
               placeholder="Start Your Search Here"
             />
-            <button>
+            <button onClick={() => handleKeyDown('Enter')}>
               <img src="images/icon/arrow-double-right.svg" alt="" />
             </button>
           </div>
 
           <p className='px-8 text-[13px] text-gray-700'>
-            Enter a question, phrase, cancer type, drug name, or other question you may have. <br /> We care about your data in our <span className='underline'>privacy policy</span>.
+            Enter a question, phrase, cancer type, drug name, or other question you may have. <br /> 
+            We care about your data in our <span className='underline'>privacy policy</span>.
           </p>
 
         </div>
@@ -38,7 +62,9 @@ const Landing = () => {
         </div>
       </div>
       <div className='mt-10 text-center'>
-        <p className='font-semibold text-purple-700'>Artificial Intelligence (Ai) has the Potential to Revolutionize Medical Research and Improve Healthcare Outcomes</p>
+        <p className='font-semibold text-purple-700'>
+          Artificial Intelligence (Ai) has the Potential to Revolutionize Medical Research and Improve Healthcare Outcomes
+        </p>
         <h2 className='mt-6 text-4xl font-semibold'>Knowledge is Power</h2>
         <p className='mt-8 text-xl leading-8 text-gray-600'>
           <span className='font-semibold text-purple-700'>&nbsp; The Purple Society &nbsp;</span>
@@ -89,9 +115,7 @@ const Landing = () => {
           Well, It is. <br />
         </i>
 
-        <button className='px-8 py-3 font-semibold text-white bg-purple-700 rounded-md mt-28'>
-          Donate Now
-        </button>
+        <Donate />
       </div>
     </div>
   )

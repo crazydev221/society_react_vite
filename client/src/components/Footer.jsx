@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className='w-full py-10 bg-gray-300'>
-        <div className='flex lg:flex-nowrap flex-wrap justify-center items-center gap-4 w-full xl:w-[1250px] lg:w-[1000px] md:w-[750px] sm:w-[640px] mx-auto'>
+        <div className='flex lg:flex-nowrap flex-wrap justify-center items-center gap-4 w-full xl:w-[1250px] lg:w-[1000px] md:w-[750px] sm:w-[640px] mx-auto px-3'>
             <div>
                 <p className='text-sm text-gray-600'>
                     © The Purple Society, A Registered 501(c)3 Charity 2022-2023 | #273785281

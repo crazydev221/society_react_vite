@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import "../styles/Logout.css";
 import { useNavigate } from 'react-router-dom';
+import { logoutUser } from '../redux/actions/authActions';
 
 const Logout = () => {
 
     const navigate = useNavigate();
     
     useEffect(() => {
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
+        logoutUser();
         // setTimeout(() => {
         navigate("/");
         // }, 3000);

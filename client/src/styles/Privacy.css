@@ -1,0 +1,66 @@
+.heading-one {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.heading-one h1 {
+    font-size: 48px !important;
+    font-weight: 600 !important;
+}
+
+.heading-one p {
+    font-size: 18px;
+    color: gray;
+    width: 70%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 770px;
+}
+
+.heading-one h1 span {
+    font-size: 48px;
+    font-weight: 600;
+    display: inline;
+    color: rgb(147, 51, 234);
+}
+
+.heading-one p span {
+    color: rgb(147, 51, 234);
+}
+
+.heading-one span {
+    color: rgb(147, 51, 234);
+    font-weight: 600;
+}
+
+.content {
+    text-align: start;
+    max-width: 768px;
+    margin: 20px auto;
+}
+
+.content h6 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    color: gray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.content ul {
+    font-size: 18px;
+    color: gray;
+}
+
+.content .disk-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 20px;
+}

@@ -166,6 +166,10 @@ form button[type='submit'] {
   background: #c4c4c4c2;
 }
 
+.login-center-buttons button:disabled {
+  opacity: 0.5;
+}
+
 .login-bottom-p {
   text-align: center;
   font-size: 15px;

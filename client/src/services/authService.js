@@ -34,6 +34,7 @@ class AuthService {
 
 
   logout() {
+    localStorage.removeItem("token");
     localStorage.removeItem("user");
   }
 
@@ -43,6 +44,42 @@ class AuthService {
       email,
       password,
     });
+  }
+
+  getUserInfo(user_id) {
+    return axios.post(URLS.baseURL + '/get-user', {
+      user: user_id
+    })
+    .then((response) => {
+      return Promise.resolve(response.data);
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
+  }
+
+  updateUser(formData) {
+    return axios.post(URLS.baseURL + '/update-user', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      }
+    })
+      .then(response => {
+        return Promise.resolve(response);
+      })
+      .catch(err => {
+        return Promise.reject(err);
+      })
+  }
+
+  updateUserInfo(info) {
+    return axios.post(URLS.baseURL + '/update-user-info', info)
+      .then(response => {
+        return Promise.resolve(response);
+      })
+      .catch(err => {
+        return Promise.reject(err);
+      })
   }
 }
 
