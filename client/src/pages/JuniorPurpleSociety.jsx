@@ -74,7 +74,7 @@ function JuniorPurpleSociety() {
                                 src={URLS.imageURL + '/uploads/juniorpurplesocieties/' + junior_purple.picture}
                                 alt=''
                             />
-                            <h4 className='absolute bottom-0 text-white bg-black w-full p-3 bg-opacity-50'>
+                            <h4 className='absolute bottom-0 w-full p-3 text-white bg-black bg-opacity-50'>
                                 {junior_purple.title}
                             </h4>
                         </div>
@@ -88,12 +88,12 @@ function JuniorPurpleSociety() {
                     alt=""
                 />
                 <div
-                    className="heading-one text-center"
+                    className="text-center heading-one"
                     dangerouslySetInnerHTML={{ __html: junior }}
                 />
             </div>
             <div className="flex flex-col gap-6 text-center">
-                <p className="text-purple-600 font-semibold">
+                <p className="font-semibold text-purple-600">
                     Start Your Own Junior Purple Society at Your School of College!
                 </p>
                 <h2 className='text-3xl font-semibold'>
@@ -108,7 +108,7 @@ function JuniorPurpleSociety() {
 
             <div className="flex flex-col gap-6 max-w-[480px] mx-auto pt-20">
                 <div
-                    className='grid grid-cols-1 gap-6 md:grid-cols-2 w-full'
+                    className='grid w-full grid-cols-1 gap-6 md:grid-cols-2'
                 >
                     <div className='w-full'>
                         <label>First Name</label>
@@ -163,14 +163,14 @@ function JuniorPurpleSociety() {
                         value={message}
                         onChange={e => setMessage(e.target.value)}
                         rows="5"
-                        className="px-3 py-2 text-sm text-gray-600 border border-gray-400 rounded-md outline-none w-full"
+                        className="w-full px-3 py-2 text-sm text-gray-600 border border-gray-400 rounded-md outline-none"
                         name="message"
                         placeholder="Leave us a message..."
                     >
                     </textarea>
                 </div>
 
-                <div className="flex gap-1 w-full items-center">
+                <div className="flex items-center w-full gap-1">
                     <input
                         checked={agree}
                         onChange={handleChanged}
@@ -178,13 +178,13 @@ function JuniorPurpleSociety() {
                         className='w-4 h-4'
                     />
                     <label htmlFor="remember-checkbox">
-                        You agree to our friendly 
-                        <span className='underline'>privacy policy</span>.
+                        You agree to our 
+                        friendly <a href='/privacy' className='underline'>privacy policy</a> .
                     </label>
                 </div>
 
                 <button
-                    className="w-full rounded-lg bg-purple-600 text-white font-semibold p-3"
+                    className="w-full p-3 font-semibold text-white bg-purple-600 rounded-lg"
                     onClick={() => handleContact()}
                 >
                     Get Started!

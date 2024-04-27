@@ -196,7 +196,7 @@ function Contact() {
                                 checked={topic.includes(topic_list[0])}
                                 onChange={e => handleChange(topic_list[0])}
                                 type='checkbox'
-                                className='w-4 h-4'
+                                className='w-4 h-4 mr-1'
                             /> {topic_list[0]}
                         </div>
                         <div className='w-full'>
@@ -204,7 +204,7 @@ function Contact() {
                                 checked={topic.includes(topic_list[1])}
                                 onChange={e => handleChange(topic_list[1])}
                                 type='checkbox'
-                                className='w-4 h-4'
+                                className='w-4 h-4 mr-1'
                             /> {topic_list[1]}
                         </div>
                         <div className='w-full'>
@@ -212,7 +212,7 @@ function Contact() {
                                 checked={topic.includes(topic_list[2])}
                                 onChange={e => handleChange(topic_list[2])}
                                 type='checkbox'
-                                className='w-4 h-4' 
+                                className='w-4 h-4 mr-1'
                             /> {topic_list[2]}
                         </div>
                         <div className='w-full'>
@@ -220,7 +220,7 @@ function Contact() {
                                 checked={topic.includes(topic_list[3])}
                                 onChange={e => handleChange(topic_list[3])}
                                 type='checkbox'
-                                className='w-4 h-4'
+                                className='w-4 h-4 mr-1'
                             /> {topic_list[3]}
                         </div>
                         <div className='w-full'>
@@ -228,7 +228,7 @@ function Contact() {
                                 checked={topic.includes(topic_list[4])}
                                 onChange={e => handleChange(topic_list[4])}
                                 type='checkbox'
-                                className='w-4 h-4'
+                                className='w-4 h-4 mr-1'
                             /> {topic_list[4]}
                         </div>
                         <div className='w-full'>
@@ -236,7 +236,7 @@ function Contact() {
                                 checked={topic.includes(topic_list[5])}
                                 onChange={e => handleChange(topic_list[5])}
                                 type='checkbox'
-                                className='w-4 h-4'
+                                className='w-4 h-4 mr-1'
                             /> {topic_list[5]}
                         </div>
                     </div>

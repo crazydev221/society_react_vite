@@ -53,7 +53,8 @@ const Landing = () => {
 
           <p className='px-8 text-[13px] text-gray-700'>
             Enter a question, phrase, cancer type, drug name, or other question you may have. <br /> 
-            We care about your data in our <span className='underline'>privacy policy</span>.
+            We care about your data in
+            our <a href='/privacy' className='underline'>privacy policy</a> .
           </p>
 
         </div>
@@ -67,26 +68,22 @@ const Landing = () => {
         </p>
         <h2 className='mt-6 text-4xl font-semibold'>Knowledge is Power</h2>
         <p className='mt-8 text-xl leading-8 text-gray-600'>
-          <span className='font-semibold text-purple-700'>&nbsp; The Purple Society &nbsp;</span>
-          has focused the last five years on designing 
-          and developing advanced Ai tools for use in pediatric cancer research.
-          With our 
-          <span className='font-semibold text-purple-700'>&nbsp; Purple Ai &nbsp;</span>
-          platform, we’re giving families and physicians 
-          the power of knowledge, and we all know: 
+          <span className='font-semibold text-purple-700'>The Purple Society</span> has
+          focused the last five years on designing and developing advanced Ai tools for use
+          in pediatric cancer research. With
+          our <span className='font-semibold text-purple-700'>Purple Ai</span> platform,
+          we’re giving families and physicians the power of knowledge, and we all know: 
           <span className='font-semibold'> knowledge is power! </span>
           This innovative technology provides deep analysis of vast amounts of 
           pediatric cancer research and drug data, giving families the information 
-          they need to make informed decisions about their child's treatment. 
-          <span className='font-semibold text-purple-700'>&nbsp; Purple Ai &nbsp;</span>
-          identifies trends and patterns that would have otherwise gone 
-          unnoticed by families without these powerful tools. 
-          Additionally, 
-          <span className='font-semibold text-purple-700'>&nbsp; Purple Ai &nbsp;</span>
-          can be used to help identify potential drug targets 
-          for pediatric cancer and to help develop new treatments and therapies, 
-          which could ultimately lead to more personalized and effective treatments 
-          for our children.
+          they need to make informed decisions about their child's
+          treatment. <span className='font-semibold text-purple-700'>Purple Ai</span> identifies
+          trends and patterns that would have otherwise gone unnoticed by families without
+          these powerful tools. 
+          Additionally, <span className='font-semibold text-purple-700'>Purple Ai</span> can
+          be used to help identify potential drug targets for pediatric cancer and to help
+          develop new treatments and therapies, which could ultimately lead to more personalized
+          and effective treatments for our children.
         </p>
         <p className='mt-8 text-xl leading-8 text-gray-600'>
           The Purple Ai platform is like a living, breathing brain, constantly learning from the latest,

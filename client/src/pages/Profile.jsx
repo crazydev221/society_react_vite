@@ -329,8 +329,8 @@ function Profile() {
                 </div>
                 <p className='text-lg font-semibold'>Invite Friends & Family</p>
                 <p className='text-sm text-gray-600'>
-                    You can invite friends and family to be part of our &nbsp;
-                    <b>The Living Ai Cancer Research Platform (PurpleAi)</b>.
+                    You can invite friends and family to be part of 
+                    our <b>The Living Ai Cancer Research Platform (PurpleAi)</b>.
                     It’s ALWAYS 100% Free!
                 </p>
                 <div
@@ -367,7 +367,7 @@ function Profile() {
                         })
                     }
                     <p
-                        className='cursor-pointer w-full col-span-1 text-lg font-semibold text-purple-600 md:col-span-2'
+                        className='w-full col-span-1 text-lg font-semibold text-purple-600 cursor-pointer md:col-span-2'
                         onClick={handleAddInvite}
                     >
                         + Add more

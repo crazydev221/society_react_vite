@@ -5,6 +5,7 @@ import Donate from '../components/Donate';
 import { getPubicPageById } from '../services/baseService';
 
 import '../styles/Support.css';
+import { URLS } from '../constants/consts';
 
 const supports = [
     {
@@ -114,7 +115,7 @@ function Support() {
                 </div>
                 <div className='flex flex-col gap-3 w-[45%] max-w-[300px]'>
                     <img src="images/logo2.png" alt="" />
-                    <a href="#" className='p-3 text-center rounded-md bg-purple-600 text-white font-semibold'>
+                    <a href="#" className='p-3 font-semibold text-center text-white bg-purple-600 rounded-md'>
                         Read How Purple Ai Is Helping Families
                     </a>
                 </div>
@@ -125,17 +126,17 @@ function Support() {
                     supports.map((support, index) => (
                         <div key={index} className="min-w-[450px] support-slider relative flex flex-col gap-3">
                             <img className='w-full h-full' src={support.image} alt='3' />
-                            <div className="absolute overlay left-3 bottom-3 right-3 p-3 bg-gray-400 bg-opacity-70">
-                                <p className='text-purple-600 font-semibold'>
+                            <div className="absolute p-3 bg-gray-400 overlay left-3 bottom-3 right-3 bg-opacity-70">
+                                <p className='font-semibold text-purple-600'>
                                     {support.description}
                                 </p>
-                                <p className="text-white font-semibold text-xl my-3">
+                                <p className="my-3 text-xl font-semibold text-white">
                                     {support.name}
                                 </p>
-                                <p className='text-white font-semibold'>
+                                <p className='font-semibold text-white'>
                                     {support.disability}
                                 </p>
-                                <p className='text-white font-semibold'>
+                                <p className='font-semibold text-white'>
                                     {support.location}
                                 </p>
                             </div>
@@ -149,10 +150,10 @@ function Support() {
                 dangerouslySetInnerHTML={{ __html: support2 }}
             />
 
-            <div className='flex flex-col justify-center items-center gap-3 support1'>
+            <div className='flex flex-col items-center justify-center gap-3 support1'>
                 <span className='text-sm font-semibold'>Your Support Matters</span>
                 <h2>Donations that fit your heart & budget</h2>
-                <div className="grid grid-cols-3 gap-6 w-full">
+                <div className="grid w-full grid-cols-3 gap-6">
                     {
                         donations.map((donation, index) => (
                             <div key={index} className="flex flex-col gap-3 p-6 border rounded-lg shadow-lg text-start">
@@ -168,16 +169,18 @@ function Support() {
                                 <p className='mb-4 text-gray-600'>
                                     {donation.subtitle}
                                 </p>
-                                <button className="w-full p-3 font-semibold text-white bg-purple-600 rounded-md">
-                                    Sign Me Up!
-                                </button>
+                                <a href={URLS.donateURL}>
+                                    <button className="w-full p-3 font-semibold text-white bg-purple-600 rounded-md">
+                                        Sign Me Up!
+                                    </button>
+                                </a>
                             </div>
                         ))
                     }
                 </div>
             </div>
             
-            <div className='support1 text-center my-3'
+            <div className='my-3 text-center support1'
                 dangerouslySetInnerHTML={{__html: support3}}
             />
             <Donate />

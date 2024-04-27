@@ -59,11 +59,9 @@ const About = () => {
                     </p>
                     <p>
                         It’s easy to take action. In just a few minutes, you can refer a child, family, or friend, 
-                        you can volunteer at a Purple Event, 
-                        <a href={URLS.donateURL}>
-                            <span className='text-purple-700'>make an online donation</span>
-                        </a>
-                        , become a Purple Partner, find a Childhood Cancer Clinical Trial, or advocate for 
+                        you can volunteer at a Purple Event
+                        ,<a href={URLS.donateURL} className='text-purple-700'> make an online donation</a>, 
+                        become a Purple Partner, find a Childhood Cancer Clinical Trial, or advocate for 
                         public policy changes benefiting those with childhood cancer.
                     </p>
                 </div>
@@ -141,8 +139,8 @@ const About = () => {
                         and hope in times of struggle.
                     </p>
                     <p>
-                        By offering both, <span className='font-semibold text-purple-600'>The Purple Society</span>
-                        is setting the stage for a brighter future for ALL families facing childhood cancer.
+                        By offering both, <span className='font-semibold text-purple-600'>The Purple Society</span> is
+                        setting the stage for a brighter future for ALL families facing childhood cancer.
                     </p>
                 </div>
                 <div className='w-full sm:w-[50%] flex flex-col gap-6 px-3'>
@@ -164,8 +162,8 @@ const About = () => {
                         “<b>One Person CAN Make A Difference</b>”!
                     </p>
                     <p>
-                        Though she may have left us, her spirit lives on in the ongoing efforts of
-                        <span className='font-semibold text-purple-600'>The Purple Society</span> .
+                        Though she may have left us, her spirit lives on in the ongoing efforts 
+                        of <span className='font-semibold text-purple-600'>The Purple Society</span>.
                         Let us follow in Nitalia's footsteps and work towards creating a world where
                         every child has the opportunity to live a healthy and fulfilling life.
                     </p>
