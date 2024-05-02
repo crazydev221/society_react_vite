@@ -9,6 +9,7 @@ function SavedResearch() {
     const [userpapers, setUserPapers] = useState([]);
     const [searchtext, setSearchText] = useState('');
     const [page, setPage] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     const user_id = JSON.parse(localStorage.getItem('user')).id;
     const w_style = 'xl:w-[1250px] lg:w-[1000px] md:w-[750px] sm:w-[640px]';
@@ -24,14 +25,17 @@ function SavedResearch() {
 
     const getUserPaper = (userId) => {
         console.log('getUserPaper', userId);
+        setLoading(true);
         getUserPapers(userId)
             .then(data => {
                 console.log(data);
                 setUserPapers(data);
+                setLoading(false);
             })
             .catch(err => {
                 console.error('Error getting user papers', err);
                 setUserPapers([]);
+                setLoading(false);
             });
     }
 
@@ -88,7 +92,10 @@ function SavedResearch() {
                     Search your saved research.
                 </p>
             </div>
-            {filterData.length !== 0 ?
+            {!loading && filterData.length === 0 ?
+                <div className={`flex w-full ${w_style} gap-4 px-3 py-2 mt-6 mx-auto`}>
+                    <NoResult />
+                </div> :
                 <div className={`w-full ${w_style} mx-auto flex justify-center p-8`}>
                     <div className='w-[68%] px-6 h-full flex flex-col gap-6 justify-center items-center'>
                         <div className='flex items-center justify-between w-full'>
@@ -208,9 +215,6 @@ function SavedResearch() {
                             </button>
                         </div>
                     </div>
-                </div> :
-                <div className={`flex w-full ${w_style} gap-4 px-3 py-2 mt-6 mx-auto`}>
-                    <NoResult />
                 </div>
             }
         </div>

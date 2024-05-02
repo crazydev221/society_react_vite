@@ -18,7 +18,7 @@ function Volunteer() {
 
     const handleContact = () => {
         if (!agree || !firstName || !lastName || !email || !phoneNumber || !message) {
-            toast.warn('Fill out the all information!');
+            toast.warn('Check out the all information!');
             return;
         }
         const info = {

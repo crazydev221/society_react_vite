@@ -125,7 +125,7 @@ function Leadership() {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 w-full">
+            <div className="grid w-full grid-cols-3 gap-6">
                 {
                     donations.map((donation, index) => (
                         <div key={index} className="flex flex-col gap-3 p-6 border rounded-lg shadow-lg text-start">
@@ -141,9 +141,11 @@ function Leadership() {
                             <p className='mb-4 text-gray-600'>
                                 {donation.subtitle}
                             </p>
-                            <button className="w-full p-3 font-semibold text-white bg-purple-600 rounded-md">
-                                Sign Me Up!
-                            </button>
+                            <a href={URLS.donateURL}>
+                                <button className="w-full p-3 font-semibold text-white bg-purple-600 rounded-md">
+                                    Sign Me Up!
+                                </button>
+                            </a>
                         </div>
                     ))
                 }

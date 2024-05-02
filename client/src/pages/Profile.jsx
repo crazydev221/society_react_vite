@@ -72,7 +72,7 @@ function Profile() {
 
     const handleChangeCountry = (e) => {
         setCountry(e.name);
-        setCountry(e.code);
+        setCountryCode(e.code);
     }
     
     const handleAddInvite = () => {
@@ -145,9 +145,9 @@ function Profile() {
         var name_array = [];
         var email_array = [];
         inviteEmails.map((_invite_email, index) => {
-            const name_value = document.getElementById(`invite_name_${index}`);
-            const email_value = document.getElementById(`invite_email_${index}`);
-            if(name_value !== '' && email_value !== '') {
+            const nameElement = document.getElementById(`invite_name_${index}`);
+            const emailElement = document.getElementById(`invite_email_${index}`);
+            if(nameElement !== '' && emailElement !== '') {
                 name_array.push(nameElement.value);
                 email_array.push(emailElement.value);
             }

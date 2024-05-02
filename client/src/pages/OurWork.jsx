@@ -64,7 +64,9 @@ function OurWork() {
                         <img
                             src={URLS.imageURL + '/uploads/ourworks/' + ourwork.picture}
                             alt=""/>
-                        <h4 className='font-semibold text-purple-600'>{ourwork.title}</h4>
+                        <h4 className='absolute bottom-0 w-full p-3 font-semibold text-white bg-black bg-opacity-50'>
+                            {ourwork.title}
+                        </h4>
                     </div>)
                 }
             </Carousel>

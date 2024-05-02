@@ -53,7 +53,6 @@ function Contact() {
         });
     }
 
-
     const w_style = 'xl:w-[1250px] lg:w-[1000px] md:w-[750px] sm:w-[640px]';
 
     return (
